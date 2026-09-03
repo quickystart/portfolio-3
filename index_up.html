@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Портфолио</title>
+    <link rel="icon" type="image/png" href="images/favicon-inverted.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/ids.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/promo-block.css">
+    <link rel="stylesheet" href="css/footnotes.css">
+    <style>
+      .ids__sequence-item a .jarofoil-up-label {
+        color: rgb(var(--ids__link-RGB)) !important;
+        transition: color 0.3s ease;
+      }
+      .ids__sequence-item a:hover .jarofoil-up-label {
+        color: rgb(var(--ids__hover-RGB)) !important;
+      }
+
+      body.no-scroll,
+      html.no-scroll {
+        overflow: hidden;
+      }
+
+      #filters .filter.active,
+      #filters .filter.active:hover {
+        color: rgb(var(--ids__hover-RGB)) !important;
+        text-decoration-color: rgba(var(--ids__hover-RGB), 0.2) !important;
+      }
+
+      .burger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        width: 35px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+      }
+      .burger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: rgb(var(--ids__link-RGB));
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+      .burger.open span:first-child {
+        transform: translateY(2px) rotate(45deg);
+      }
+      .burger.open span:last-child {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      @media (width <= 766px) {
+        header {
+          position: relative;
+        }
+        .burger {
+          display: flex;
+          z-index: 11;
+        }
+        #filters {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 0;
+          width: min(100%, 30em);
+          margin: 0 auto;
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          place-content: start center;
+          align-content: start;
+          padding: calc(4.9em) 0 0;
+          background: rgba(var(--ids__background-RGB), 0.6);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+          transform: translateX(100%);
+          visibility: hidden;
+          overflow: hidden;
+          transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.45s;
+          z-index: 10;
+        }
+        #filters.open {
+          transform: translateX(0);
+          visibility: visible;
+        }
+        #filters .filter {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          aspect-ratio: 1 / 1;
+          padding: 1em;
+          border: none;
+          border-top: 0.3px solid rgba(128, 128, 128, 1);
+          border-left: 0.3px solid rgba(128, 128, 128, 1);
+          box-shadow: none;
+          background: rgba(211, 211, 211, 0.3);
+          border-radius: 0;
+          text-decoration: none;
+        }
+        #filters .filter:nth-child(2),
+        #filters .filter:nth-child(4) {
+          border-right: 0.3px solid rgba(128, 128, 128, 1);
+        }
+        #filters .filter:nth-child(3),
+        #filters .filter:nth-child(4) {
+          border-bottom: 0.3px solid rgba(128, 128, 128, 1);
+        }
+        #filters .filter strong {
+          margin: 0;
+        }
+        #filters .filter.active {
+          background: rgba(var(--ids__hover-RGB), 0.18);
+        }
+      }
+    </style>
+  </head>
+  
+<header style="justify-content: space-between;">
+    <a href="aboutme_new.html"><strong>Серёжа Стрижин</strong></a>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span>
+    </button>
+    <div id="filters">
+        <a href="#" class="filter active" data-filter="all"><strong>Все</strong></a>
+        <a href="#" class="filter" data-filter="design"><strong>Графический дизайн</strong></a>
+        <a href="#" class="filter" data-filter="ux"><strong>Интерфейсы</strong></a>
+        <a href="#" class="filter" data-filter="branding"><strong>Брендинг</strong></a>
+    </div>
+</header>
+  
+<body class="ids">
+<main>
+<div>
+<div class="section">
+<div class="ids__sequence XL">
+  
+                  <div class="ids__sequence-item" data-category="branding">
+                 <a href="agromir_up.html">
+                  <figure>
+                    <img src="images/gallery/agromir_new_button_image.webp">
+                    <h5>Дизайн для агропромышленного холдинга</h5>
+                  </figure>
+                </a>
+                </div>
+  
+                    <div class="ids__sequence-item" data-category="ux">
+                 <a href="better_ui.html">
+                  <figure>
+                    <img src="images/gallery/soon.webp">
+                    <h5>Улучшенный интерфейс сервиса покупки билетов</h5>
+                  </figure>
+                </a>
+                </div>
+  
+                 <div class="ids__sequence-item" data-category="branding">
+                 <a href="newtech_up.html">
+                  <figure>
+                    <img src="images/gallery/newtech_1.webp">
+                    <h5>Ребрендинг поставщика интернет и тв услуг</h5>
+                  </figure>
+                  </a>
+                </div>
+
+                <div class="ids__sequence-item" data-category="design">
+                 <a href="jarofoil_up.html">
+                  <figure>
+                    <img src="images/gallery/jar_bunner_2.4.webp">
+                    <h5 class="jarofoil-up-label">Дизайн этикетки банки масла</h5>
+                  </figure>
+                </a>
+                </div>
+
+                <div class="ids__sequence-item" data-category="branding">
+                   <a href="tsum_up.html">
+                    <figure>
+                    <img src="images/gallery/tsum_2.webp">
+                    <h5>Айдентика торгового центра</h5>
+                    </figure>
+                    </a>
+                    </div>
+
+</div>
+</div>
+</div>
+</main>
+</body>
+
+<footer>
+<div class="ids__space L"></div>
+        <div class="ids__sequence M gap-L">
+            <div class="ids__sequence-item"><img src="images/gallery/loop_animation.gif" style="width: 55%" alt=""></div>
+            <ol class="ids__sequence-item">
+            <h5>Медиа</h5>
+            <hgroud>
+            <li class=""><a href="https://t.me/theauthoris"><p>Референсы</p></a></li>
+            <p style="color: rgb(var(--ids__link-RGB))">Ресурс, в котором собираю ваушные работы</p></hgroud>
+            <hgroud>
+            <div class="ids__space S"></div>
+            <li><a href="https://t.me/thestryjin"><p>Канал</p></a></li>
+            <p style="color: rgb(var(--ids__link-RGB))">Личные заметки</p></hgroud>
+            </ol>
+            <ol class="ids__sequence-item">
+            <h5>Работы</h5>
+            <li class=""><a href="agromir_up.html"><p>Фирстиль АгроМир</p></a></li>
+            <div class="ids__space S"></div>
+            <li class=""><a href="better_ui.html"><p>Улучшенный UI</p></a></li>
+            <div class="ids__space S"></div>
+            <li><a href="newtech_up.html"><p>Ребрендинг провайдера</p></a></li>
+            <div class="ids__space S"></div>
+                <li><a href="jarofoil_up.html"><p>Дизайxн этикетки</p></a></li>
+            <div class="ids__space S"></div>
+            <li><a href="tsum_up.html"><p>Айдентка ТЦ</p></a></li>
+            </ol>
+            <ol class="ids__sequence-item">
+            <h5>Навигация</h5>
+            <li><a href="index_up.html"><p>Портфолио</p></a></li>
+            <div class="ids__space S"></div>
+            <li><a href="aboutme_new.html"><p>Обо мне</p></a></li>
+            <div class="ids__space S"></div>
+            <li><a href="https://t.me/strijyngd"><p>Связь</p></a></li>
+            <div class="ids__space S"></div>
+            </ol>
+        </div>
+        <p>Сайт-портфолио был обновлен в 2026</p>
+</footer>
+
+<body class="ids">
+    <script src="./js/lib/photoswipe.umd.min.js"></script>
+    <script src="./js/lib/photoswipe-lightbox.umd.min.js"></script>
+    <script src="./js/gallery.js"></script>
+
+    <script src="./js/sleepy.js"></script>
+    <script src="./js/footnotes.js"></script>
+    <script src="./js/promo-block.js"></script>
+  
+    <script>
+    const burger = document.getElementById('burger');
+    const filters = document.getElementById('filters');
+    burger.addEventListener('click', () => {
+        const isOpen = filters.classList.toggle('open');
+        burger.classList.toggle('open', isOpen);
+        burger.setAttribute('aria-expanded', isOpen);
+        document.body.classList.toggle('no-scroll', isOpen);
+    });
+
+    document.querySelectorAll('.filter').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Close mobile menu
+            filters.classList.remove('open');
+            burger.classList.remove('open');
+            burger.setAttribute('aria-expanded', false);
+            document.body.classList.remove('no-scroll');
+            
+            // Remove active class from all filters
+            document.querySelectorAll('.filter').forEach(f => f.classList.remove('active'));
+            // Add active class to clicked filter
+            link.classList.add('active');
+            
+            const filterValue = link.getAttribute('data-filter');
+            const items = document.querySelectorAll('main .ids__sequence-item');
+            
+            items.forEach(item => {
+                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+    </script>
+    </body>
+  </html>
