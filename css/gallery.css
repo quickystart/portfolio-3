@@ -34,12 +34,12 @@ ids-gallery, .ids__gallery {
 /* Split layout: text left, images right */
 @media (width >= 767px) {
     .ids-gallery--split {
+        position: relative;
         display: grid;
         grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-        grid-auto-flow: dense;
         align-items: start;
         column-gap: calc(var(--ids__density) * 1.5em);
-        row-gap: calc(var(--ids__density) * 1.4em);
+        row-gap: 0;
     }
 
     .ids-gallery--split > figure {
@@ -47,10 +47,17 @@ ids-gallery, .ids__gallery {
     }
 
     .ids-gallery--split > .ids__text-widt {
-        grid-column: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc((100% - var(--ids__density) * 1.5em) * 0.4);
     }
 
     .ids-gallery--split > .ids__space {
+        grid-column: 2;
+    }
+
+    .ids-gallery--split > .ids__space:has(+ .ids__text-widt) {
         display: none;
     }
 }
