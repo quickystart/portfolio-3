@@ -115,6 +115,10 @@
         background: rgb(var(--ids__hover-RGB));
       }
 
+      #filters .filter-reset {
+        display: none;
+      }
+      
       @media (width <= 766px) {
         header {
           position: relative;
@@ -185,6 +189,29 @@
         #filters .filter strong {
           margin: 0;
           font-weight: inherit;
+        }
+        #filters .filter-reset {
+          display: inline-flex;
+          align-items: center;
+          margin: 0.4em 0 1.6em;
+          padding: 0.35em 0.9em;
+          border: none;
+          background: rgba(128, 128, 128, 0.08);
+          border-radius: 0.5em;
+          corner-shape: squircle;
+          overflow: hidden;
+          color: rgb(var(--ids__link-RGB));
+          font-family: inherit;
+          font-size: 0.805rem;
+          font-weight: 400;
+          line-height: inherit;
+          cursor: pointer;
+          transition: color 0.5s ease, background 0.5s ease;
+        }
+        #filters .filter-reset:hover {
+          color: rgb(var(--ids__hover-RGB));
+          background: rgba(var(--ids__hover-RGB), 0.12);
+          transition: color 0s ease, background 0s ease;
         }
       }
 
@@ -394,6 +421,15 @@
             box.checked = !box.checked;
             applyFilter();
         });
+    });
+
+      const resetButton = document.querySelector('#filters .filter-reset');
+    resetButton.addEventListener('click', () => {
+        links.forEach(link => {
+            const box = link.querySelector('input[type="checkbox"]');
+            if (box) box.checked = false;
+        });
+        applyFilter();
     });
     </script>
     </body>
