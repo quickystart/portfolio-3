@@ -80,7 +80,7 @@
         .ids .ids__sequence-item > a[href="newtech_up.html"] > figure,
         .ids .ids__sequence-item > a[href="tsum_up.html"] > figure,
         .ids .ids__sequence-item > a[href="better_ui.html"] > figure {
-          border-radius: var(--ids__radius);
+          border-radius: 1em;
           corner-shape: squircle;
           overflow: visible;
         }
@@ -89,21 +89,21 @@
         .ids .ids__sequence-item > a[href="newtech_up.html"] > figure > img,
         .ids .ids__sequence-item > a[href="tsum_up.html"] > figure > img,
         .ids .ids__sequence-item > a[href="better_ui.html"] > figure > img {
-          border-radius: var(--ids__radius) var(--ids__radius) 0 0;
+          border-radius: 1em 1em 0 0;
           corner-shape: squircle;
         }
         .ids .ids__sequence-item > a[href="jarofoil_up.html"] > figure {
           background: rgba(245, 245, 245, 0.85);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          border-radius: var(--ids__radius);
+          border-radius: 1em;
           corner-shape: squircle;
           overflow: hidden;
         }
         .ids .ids__sequence-item > a[href="jarofoil_up.html"] > figure > .jarofoil-up-img {
           display: block;
           overflow: hidden;
-          border-radius: var(--ids__radius) var(--ids__radius) 0 0;
+          border-radius: 1em 1em 0 0;
           corner-shape: squircle;
         }
         .ids .ids__sequence-item > a[href="jarofoil_up.html"] > figure > .jarofoil-up-img > img {
@@ -157,11 +157,10 @@
           .ids .ids__sequence-item > a > figure,
           .ids .ids__sequence-item > a[href="jarofoil_up.html"] > figure > .jarofoil-up-img {
             mask:
-              url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,1 c0,-1 0,-1 1,-1 l99,0 l0,100 l-100,0 Z"/></svg>') top left / calc(var(--ids__radius) * 100) no-repeat intersect,
-              url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,0 l99,0 c1,0 1,0 1,1 l0,99 l-100,0 l0,-100 Z"/></svg>') top right / calc(var(--ids__radius) * 100) no-repeat intersect,
-              url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,0 l100,0 l0,99 c0,1 -0,1 -1,1 l-99,0 Z"/></svg>') bottom right / calc(var(--ids__radius) * 100) no-repeat intersect,
-              url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,0 l100,0 l0,100 l-99,0 c-1,0 -1,-0 -1,-1 Z"/></svg>') bottom left / calc(var(--ids__radius) * 100) no-repeat intersect
-            ;
+              url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,1 c0,-1 0,-1 1,-1 l99,0 l0,100 l-100,0 Z"/></svg>') top left / calc(1em * 100) no-repeat intersect,
+              url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,0 l99,0 c1,0 1,0 1,1 l0,99 l-100,0 l0,-100 Z"/></svg>') top right / calc(1em * 100) no-repeat intersect,
+              url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,0 l100,0 l0,99 c0,1 -0,1 -1,1 l-99,0 Z"/></svg>') bottom right / calc(1em * 100) no-repeat intersect,
+              url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,0 l100,0 l0,100 l-99,0 c-1,0 -1,-0 -1,-1 Z"/></svg>') bottom left / calc(1em * 100) no-repeat intersect;
             border-radius: 0;
             border-radius: initial;
           }
@@ -171,9 +170,8 @@
           .ids .ids__sequence-item > a[href="tsum_up.html"] > figure > img,
           .ids .ids__sequence-item > a[href="better_ui.html"] > figure > img {
             mask:
-              url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,1 c0,-1 0,-1 1,-1 l99,0 l0,100 l-100,0 Z"/></svg>') top left / calc(var(--ids__radius) * 100) no-repeat intersect,
-              url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,0 l99,0 c1,0 1,0 1,1 l0,99 l-100,0 l0,-100 Z"/></svg>') top right / calc(var(--ids__radius) * 100) no-repeat intersect
-            ;
+              url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,1 c0,-1 0,-1 1,-1 l99,0 l0,100 l-100,0 Z"/></svg>') top left / calc(0.5em * 100) no-repeat intersect,
+              url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path d="m0,0 l99,0 c1,0 1,0 1,1 l0,99 l-100,0 l0,-100 Z"/></svg>') top right / calc(0.5em * 100) no-repeat intersect;
             border-radius: 0;
             border-radius: initial;
           }
